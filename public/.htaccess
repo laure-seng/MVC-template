@@ -1,0 +1,17 @@
+# on demande à apache de démarrer son "moteur" de réecriture d'URL
+RewriteEngine On
+
+# on utilise une RegEx pour récupérer "l'URL de base" de notre site
+# l'URL de base c'est un truc du genre : localhost/S05/.../S05-E01-.../
+RewriteCond %{REQUEST_URI}::$1 ^(/.+)/(.*)::\2$
+# on stocke cette URL de base dans une variable d'environnement
+RewriteRule ^(.*) - [E=BASE_URI:%1]
+
+# on redirige toutes les requêtes vers index.php
+# (sauf si le fichier ou dossier demandé existe)
+# et on envoie l'URL demandée par le visiteur dans le paramètre d'URL GET page
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?page=/$1 [QSA,L]
+
+
