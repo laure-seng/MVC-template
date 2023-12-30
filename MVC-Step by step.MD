@@ -1,6 +1,6 @@
 # MVC FROM SCRATCH 
 
-1.créer l'arborescence'
+1. Créer l'arborescence'
 
 <dossier_projet_MVC>
   |- .gitignore
@@ -39,8 +39,7 @@ $router->map('GET', '/', [
     'controller' => 'MainController',
     'method' => 'home'
 ], 'home');
-
-// exemple route paramétrique
+Exemple de route paramétrique
 $router->map('GET', '/catalogue/categorie/[i:id]', [
     'controller' => 'CatalogController',
     'method' => 'category'
