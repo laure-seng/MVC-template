@@ -51,8 +51,7 @@ Exemple de routes :
 10. Récupération des données avec le pattern **Active Record** : 
 une table => une classe  , 
 une colonne=>une propriété de la classe,
-méthodes findAll() et find() pour tous les modèles 
-+ méthodes correspondant au CRUD 
+méthodes findAll() et find() pour tous les modèles \+ méthodes correspondant au CRUD 
 11. **Même processus avec les routes paramètriques et le catalogController**
 12. **Dynamisation en utilisant $viewData ds les template** pour remplacer ce qui est codé en dur
 13. **Dynamiser les liens** de nav avec generate(1/nom de la route, défini avec map en 4e arg() , [paramètres éventuels])
