@@ -13,6 +13,8 @@ require __DIR__."/../app/Models/Model.php" ;
 // INCLURE autoload.php => dependances de Composer
 require_once __DIR__ . '/../vendor/autoload.php';
 
+dump($_SERVER) ;
+
 // Instance de Altorouter
 $router = new AltoRouter();
 
