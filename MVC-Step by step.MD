@@ -66,12 +66,17 @@ ds une variable qu'on va intégrer ds le viewData ss forme de tableau associatif
 
 16. A. EN PLUS :Récap dans l'ordre de la mise en place de la **norme PSR 4** à la place des require
 1/ changer le **composer.json** avec la norme PSR-4 et le namespace du dossier racine
+"autoload": {
+		"psr-4": {
+			"root\\": "app/"
+		}
+	    }
 2/ **déclarer les namespaces** ds les fichiers de classes et les use 
 3/ vérifier qd on appelle les fichiers que le chemin crrspd au nveau chemin, on pt réécrire tt le chemin avec le namespace ms on utilise **self::class**
 4/ on fait les use nécessaires
 5/ On enlève les require sauf autoload.php
 6/ On modifie le dispatcher et index.php
-7/ On tape ds le terminal composer autoload
+7/ On tape ds le terminal composer dump-autoload
 B. Notes sur les namespaces :
 - un namespace se déclare ainsi `namespace monDossierVirtuel\monAutDossier ;`
 - on utilise le mot clé **use** `use monDossierVirtuel\maClasse ;` par exemple

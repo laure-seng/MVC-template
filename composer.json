@@ -3,4 +3,10 @@
         "symfony/var-dumper": "^6.4",
         "altorouter/altorouter": "^2.0"
     }
+    ,
+    "autoload": {
+		"psr-4": {
+			"Oshop\\": "app/"
+		}
+	    }
 }
